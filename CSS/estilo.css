@@ -51,8 +51,25 @@ main#fundo {
 
 }
 
+main#fundonot {
+    width: 100vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../img/fundonot.png);
+    background-attachment: fixed;
+    min-height: calc(100vh - 11rem);
+    display: flex;
+    align-items: center;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    
+    gap: 75px;
+}
+
+
 a:link{
     text-decoration: none;
+    color: rgb(255, 255, 255);
 }
 
 a:hover{
