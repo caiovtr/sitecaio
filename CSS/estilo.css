@@ -5,11 +5,16 @@
     outline: 0;
 }
 
+body {
+    background-color: black;
+}
+
 body header {
     padding: 15px;
     height: 5.5rem;
     background-color: black;
     display: flex;
+    width: 100vw;
 }
 
 header img {
@@ -55,16 +60,15 @@ main#fundonot {
     width: 100vw;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url(../img/fundonot.png);
-    background-attachment: fixed;
+    background-image: url(../img/fundonot.png);;
     min-height: calc(100vh - 11rem);
     display: flex;
     align-items: center;
-    grid-template-columns: auto auto auto;
     justify-content: center;
-    
     gap: 75px;
+    flex-wrap: wrap;
 }
+
 
 
 a:link{
@@ -75,4 +79,12 @@ a:link{
 a:hover{
     color: rgb(0, 238, 255);
     text-decoration: underline rgb(255, 255, 255);
+}
+
+a#not2 {
+    font-size: x-large;
+}
+
+a#not1 {
+    font-size: large;
 }
