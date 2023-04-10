@@ -2,11 +2,23 @@
     img#nots{
         width: 70%;
     }
+
+
+    footer img {
+        height: 40%;
+        padding: 0.3rem;
+
+    }
 }
 
 @media(max-width: 1139px){
     img#nots{
         width: 80%;
+    }
+
+    footer img {
+        height: 80%;
+        padding: 0.4rem;
     }
 }
 
@@ -32,11 +44,10 @@
 }
 
 /*Menu responsivo*/
-
 #labelmenu{
-    width: 50%;
+    width: 100%;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: right;
     height: 100%;
 }
@@ -44,7 +55,7 @@
     margin-right: 3%;
     height: 100%;
 }
-/*para a navegação não encostar no título*/
+
 @media(max-width:1542px){
     #menu ul{
         padding-right: 2%;
@@ -56,7 +67,6 @@
 
 
 @media(max-width:1140px){
-    /*menu vai desaparecer*/
     #menu{
         display: none;
         height: calc(100vh - 7rem);
@@ -70,24 +80,21 @@
         background-color: var(--primary);
         background-color: rgba(69, 90, 100, 0.856);
         height: 100%;
-        width: 50%;
         align-content:flex-start;
         padding-right: 2%;
 
     }
 
-    /*Esconderemos a ul*/
     input#checkmenu ~ #menu ul{
         position: absolute;
         right:-100%;
         animation: appear;
         animation-duration: 1.5s;
         animation-fill-mode: forwards;
-        transition: right 3s;
+        transition: right 2s;
         
     }
     
-    /*para que a ul, escondida à direita, apareça*/
     @keyframes appear {
         100%{
             right: 0;
@@ -113,7 +120,7 @@
 
     input#checkmenu:checked ~ #menu{
         display: flex;
-        backdrop-filter: blur(5px);
+        backdrop-filter: blur(0px);
     }
 }
 
