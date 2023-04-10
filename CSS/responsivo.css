@@ -1,0 +1,129 @@
+@media(max-width: 600px){
+    img#nots{
+        width: 70%;
+    }
+}
+
+@media(max-width: 1139px){
+    img#nots{
+        width: 80%;
+    }
+}
+
+#menu {
+    width: 50%;
+    float: right;
+}
+
+#menu ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#menu ul li {
+    display: inline-block;
+    font-size: 1.7rem;
+}
+
+#menu ul li:hover a{
+    text-decoration: underline;
+}
+
+/*Menu responsivo*/
+
+#labelmenu{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    height: 100%;
+}
+.menuburguer{
+    margin-right: 3%;
+    height: 100%;
+}
+/*para a navegação não encostar no título*/
+@media(max-width:1542px){
+    #menu ul{
+        padding-right: 2%;
+    }
+    #menu ul li{
+        font-size: 1.3em;
+    }
+}
+
+
+@media(max-width:1140px){
+    /*menu vai desaparecer*/
+    #menu{
+        display: none;
+        height: calc(100vh - 7rem);
+        width: 100%;
+        justify-content: right;      
+        
+    }
+
+    #menu ul{
+        flex-wrap: wrap;
+        background-color: var(--primary);
+        background-color: rgba(69, 90, 100, 0.856);
+        height: 100%;
+        width: 50%;
+        align-content:flex-start;
+        padding-right: 2%;
+
+    }
+
+    /*Esconderemos a ul*/
+    input#checkmenu ~ #menu ul{
+        position: absolute;
+        right:-100%;
+        animation: appear;
+        animation-duration: 1.5s;
+        animation-fill-mode: forwards;
+        transition: right 3s;
+        
+    }
+    
+    /*para que a ul, escondida à direita, apareça*/
+    @keyframes appear {
+        100%{
+            right: 0;
+        }
+    }
+    
+
+    #menu ul li{
+        width: 100%;
+        text-align: right;
+        display: block;
+        height: calc(7rem/3);
+        padding: 2% 0;
+    }
+
+    .menuburguer{
+        display: flex;
+        width: 30px;
+        height: 30px;
+        flex-wrap: wrap;
+    }
+
+
+    input#checkmenu:checked ~ #menu{
+        display: flex;
+        backdrop-filter: blur(5px);
+    }
+}
+
+.hamburguer{
+    background-color: aliceblue;
+    color: aliceblue;
+    width: 100%;
+    height: 5%;
+}
+
+#checkmenu{
+    display: none;
+}

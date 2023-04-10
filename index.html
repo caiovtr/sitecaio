@@ -5,18 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="CSS/estilo.css" rel="stylesheet" />
+    <link href="CSS/responsivo.css" rel="stylesheet" />
     <title>Vasco</title>
 </head>
 <body>
     <header>
         <picture><img src="img/logo.png"></picture>
+        
+        <input type="checkbox" name="" id="checkmenu">
+        <label for="checkmenu" id="labelmenu">
+            <div class="menuburguer">
+                <span class="hamburguer" id="hamburguer1"></span>
+                <span class="hamburguer" id="hamburguer2"></span>
+                <span class="hamburguer" id="hamburguer3"></span>
+            </div>
+        </label>
 
-        <nav>
-            <a href="index.html">Página Inicial</a>
-            <a href="./pages/noticias.html">Notícias</a>
-            <a href="#">Plantel</a>
-            <a href="#">História</a>
-
+        <nav id="menu">
+            <ul>
+                <li><a href="index.html">Página Inicial</a></li>
+                <li><a href="./pages/noticias.html">Notícias</a></li>
+                <li><a href="#">Plantel</a></li>
+                <li><a href="#">História</a></li>
+            </ul>
         </nav>
     </header>
     <main id="fundo"></main>
@@ -27,3 +38,4 @@
     </footer>
 </body>
 </html>
+
